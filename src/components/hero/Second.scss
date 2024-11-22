@@ -1,0 +1,119 @@
+.second {
+  &__box {
+    margin: 0 auto;
+    margin-top: 140px;
+    text-align: center;
+    &-txt {
+      font-size: 18px;
+      line-height: 22px;
+      color: #c99e71;
+    }
+    &-title {
+      font-size: 48px;
+      line-height: 62px;
+      color: #ffffff;
+      font-family: cursive;
+      margin: 12px 0 56px 0;
+    }
+    &-products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 36px;
+    }
+    &-product {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #121315;
+      padding: 48px;
+      text-align: center;
+
+      &-img {
+        margin-bottom: 36px;
+      }
+      &-title {
+        font-size: 24px;
+        line-height: 30px;
+        color: #ffffff;
+        margin: 20px 0;
+        text-transform: uppercase;
+        width: max-content;
+        display: block;
+      }
+      &-price {
+        font-size: 18px;
+        line-height: 22px;
+        color: #ffffff;
+      }
+      &-price span:first-child {
+        color: #c99e71;
+      }
+      &-price span:last-child {
+        text-decoration: line-through;
+      }
+      &-btn {
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        padding: 13px 20px;
+        background: #c99e71;
+        color: #ffffff;
+        max-width: max-content;
+        display: none;
+      }
+      &-icon {
+        margin-right: 12px;
+        font-size: 20px;
+      }
+      &:hover {
+        .second__box-product-price {
+          display: none;
+        }
+        .second__box-product-image {
+          display: none;
+        }
+        .second__box-product-btn {
+          display: flex;
+          transition: 0.5s;
+          &:hover {
+            background: #7a6044;
+          }
+        }
+      }
+    }
+    &-btn {
+      margin-top: 56px;
+      font-size: 18px;
+      line-height: 22px;
+      text-align: center;
+      padding: 20px 36px;
+      background: #c99e71;
+      color: #ffffff;
+      max-width: max-content;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .second {
+    &__box {
+      &-title {
+        font-size: 38px;
+        line-height: 42px;
+      }
+      &-products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .second {
+    &__box {
+      &-products {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
